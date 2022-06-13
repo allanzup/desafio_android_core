@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titulo_16sp">16sp</dimen>
+    <dimen name="Margin_app">16dp</dimen>
+    <dimen name="margemtop_32_dp">32dp</dimen>
+    <dimen name="margintop_16dp">16dp</dimen>
+    <dimen name="altura_ItemProduto_50dp">50dp</dimen>
+    <dimen name="Largura_ItemProduto">50dp</dimen>
+    <dimen name="fontetexto12sp">12sp</dimen>
+</resources>

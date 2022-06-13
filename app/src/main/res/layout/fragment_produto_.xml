@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".home.produto.Produto_Fragment">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margemtop_32_dp"
+        android:text="Cadastro de produto"
+        android:textSize="@dimen/titulo_16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etNomeProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:hint="Digite o nome do produto"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etQuantProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:hint="Digite a quantidade do produto"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etValorUnitProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:hint="Digite o valor unitario do produto"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etReceitaProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:hint="Digite a receita"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnCadrastroProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/vermelho"
+        android:text="Cadastrar Produto" />
+
+    <Button
+        android:id="@+id/btnverProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/verde"
+        android:text="Ver Produto" />
+
+</LinearLayout>
