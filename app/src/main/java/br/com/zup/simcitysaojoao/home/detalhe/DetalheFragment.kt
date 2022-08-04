@@ -25,9 +25,13 @@ class DetalheFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val listaproduto = arguments?.getParcelableArrayList<Produto>("LISTA_DE_PRODUTO")
         if (listaproduto != null) {
-            binding.rvlistaProduto.adapter = ProdutoAdapter(listaproduto)
+            binding.rvlistaProduto.adapter = ProdutoAdapter(listaproduto,this::goToDetail)
             binding.rvlistaProduto.layoutManager = LinearLayoutManager(context)
         }
     }
-
+    fun onClick(produto:Produto) {
+        val bundle = bundleOf("PRODUTO" to produto)
+        NavHostFragment.findNavController(this)
+            .navigate(R.id.action_produtosCadastrados2_to_detalheProdutoFragment,bundle)
+    }
 }
