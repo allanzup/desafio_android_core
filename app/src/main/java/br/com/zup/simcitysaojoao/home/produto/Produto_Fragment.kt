@@ -26,6 +26,10 @@ class Produto_Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnCadrastroProduto.setOnClickListener {
+            val listaProdutBundle=recebeListaProduto()
+            if (listaProdutBundle!=null){
+                listaProduto.addAll(listaProdutBundle)
+            }
             val nomeProduto = binding.etNomeProduto.text.toString()
             val quantProduto = binding.etQuantProduto.text.toString()
             val valorUnProduto = binding.etValorUnitProduto.text.toString()
@@ -59,7 +63,15 @@ class Produto_Fragment : Fragment() {
             NavHostFragment.findNavController(this)
                 .navigate(R.id.action_produto_Fragment_to_detalheFragment, bundle)
         }
+        binding.btnvalottotal.setOnClickListener {
+            val bundle = bundleOf("LISTA_DE_PRODUTO" to listaProduto)
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_produto_Fragment_to_totalFragment, bundle)
+        }
     }
 
+    private fun recebeListaProduto(): ArrayList<Produto>? {
+        return arguments?.getParcelableArrayList<Produto>("LISTA_PRODUTO")
+    }
 
 }

@@ -62,5 +62,10 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/verde"
         android:text="Ver Produto" />
-
+    <Button
+        android:id="@+id/btnvalottotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/azul"
+        android:text="Valor Total" />
 </LinearLayout>

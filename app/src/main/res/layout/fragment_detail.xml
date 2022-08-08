@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.detalhe.DetailFragment">
+
+    <ImageView
+        android:id="@+id/ivcarrinhodetail"
+        android:layout_width="@dimen/margincarrinhodetail"
+        android:layout_height="@dimen/margincarrinhodetail"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/carrinho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivfavoritar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_favoritar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/margintop_16dp"
+        android:layout_marginBottom="@dimen/margintop_16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvnomeitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="item"
+        android:textSize="@dimen/fontetexto12sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margintop_16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivcarrinhodetail"
+        app:layout_constraintStart_toEndOf="@+id/ivcarrinhodetail"
+        app:layout_constraintTop_toTopOf="@+id/ivcarrinhodetail" />
+
+    <TextView
+        android:id="@+id/tvquantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Quantidade:"
+        android:textSize="@dimen/fontetexto12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ivcarrinhodetail"
+        app:layout_constraintTop_toBottomOf="@+id/ivcarrinhodetail" />
+
+    <TextView
+        android:id="@+id/tvvalorunit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Unitário:"
+        android:textSize="@dimen/fontetexto12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margintop_16dp"
+        app:layout_constraintStart_toStartOf="@+id/tvquantidade"
+        app:layout_constraintTop_toBottomOf="@+id/tvquantidade" />
+
+    <TextView
+        android:id="@+id/tvreceita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margintop_16dp"
+        android:text="Receita:"
+        android:textSize="@dimen/fontetexto12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvvalorunit"
+        app:layout_constraintTop_toBottomOf="@+id/tvvalorunit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
