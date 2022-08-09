@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".home.produto.Produto_Fragment">
+    tools:context=".home.produto.ProdutoFragment">
 
     <TextView
         android:id="@+id/textView4"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:autofillHints="name"
         android:hint="Digite a quantidade do produto"
-        android:inputType="text" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/etValorUnitProduto"
@@ -62,5 +62,10 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/verde"
         android:text="Ver Produto" />
-
+    <Button
+        android:id="@+id/btnvalottotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/azul"
+        android:text="Valor Total" />
 </LinearLayout>

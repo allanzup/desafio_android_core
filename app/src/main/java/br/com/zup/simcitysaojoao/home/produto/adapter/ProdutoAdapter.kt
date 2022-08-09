@@ -33,12 +33,16 @@ class ProdutoAdapter(
 
     override fun getItemCount(): Int = listaProduto.size
     fun atualizarListaProduto(novaListaProduto: MutableList<Produto>) {
+<<<<<<< HEAD
+       listaProduto=novaListaProduto
+=======
         if (listaProduto.size == 0) {
             listaProduto = novaListaProduto
         }
         else {
             listaProduto.addAll(novaListaProduto)
         }
+>>>>>>> 33dc4c65234aeef6f080982c72f879014cd2a61b
         notifyDataSetChanged()
     }
 
