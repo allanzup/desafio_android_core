@@ -6,7 +6,7 @@
     app:startDestination="@id/produto_Fragment">
     <fragment
         android:id="@+id/produto_Fragment"
-        android:name="br.com.zup.simcitysaojoao.home.produto.Produto_Fragment"
+        android:name="br.com.zup.simcitysaojoao.home.produto.ProdutoFragment"
         android:label="fragment_produto_"
         tools:layout="@layout/fragment_produto_" >
         <action
@@ -41,5 +41,8 @@
         <action
             android:id="@+id/action_totalFragment_to_produto_Fragment"
             app:destination="@id/produto_Fragment" />
+        <action
+            android:id="@+id/action_totalFragment_to_detalheFragment"
+            app:destination="@id/detalheFragment" />
     </fragment>
 </navigation>

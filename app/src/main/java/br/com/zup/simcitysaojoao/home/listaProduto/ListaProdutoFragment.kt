@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.zup.simcitysaojoao.R
 import br.com.zup.simcitysaojoao.databinding.FragmentListaProdutoBinding
 import br.com.zup.simcitysaojoao.home.model.Produto
+import br.com.zup.simcitysaojoao.home.produto.ProdutoActivity
 import br.com.zup.simcitysaojoao.home.produto.adapter.ProdutoAdapter
 
 
@@ -36,5 +37,7 @@ class ListaProdutoFragment : Fragment() {
         val bundle = bundleOf("PRODUTO" to produto)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_detalheFragment_to_detailFragment,bundle)
+        (activity as ProdutoActivity).supportActionBar?.title="Produto"
     }
+
 }

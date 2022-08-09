@@ -10,6 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import br.com.zup.simcitysaojoao.R
 import br.com.zup.simcitysaojoao.databinding.FragmentTotalBinding
 import br.com.zup.simcitysaojoao.home.model.Produto
+import br.com.zup.simcitysaojoao.home.produto.ProdutoActivity
 
 class TotalFragment : Fragment() {
     private lateinit var binding: FragmentTotalBinding
@@ -31,11 +32,16 @@ class TotalFragment : Fragment() {
         }
         binding.tvdescvalortot.text="O Valor total de todos os produtos é de ${somatotal}"
         binding.bcadastProdu.setOnClickListener {
-            val bundle= bundleOf("LISTA_PRODUTO" to totalproduto  )
-            NavHostFragment.findNavController(this)
-                .navigate(R.id.action_totalFragment_to_produto_Fragment,bundle)
+            (activity as ProdutoActivity).onBackPressed()
 
         }
+        binding.btnverProdut.setOnClickListener {
+            val bundle= bundleOf("LISTA_DE_PRODUTO" to totalproduto  )
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_totalFragment_to_detalheFragment,bundle)
+
+        }
+        (activity as ProdutoActivity).supportActionBar?.title="Valor Total"
     }
 
 }
